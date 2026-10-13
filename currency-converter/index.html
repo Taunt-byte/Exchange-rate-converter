@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Converta moedas com cotações atualizadas.">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div class="logo">↗</div>
+      <h1>Currency<span>Flow</span></h1>
+      <p>Conversão de moedas, sem complicação.</p>
+    </header>
+
+    <section class="converter">
+      <label for="amount">Valor para converter</label>
+      <input
+        type="number"
+        id="amount"
+        value="100"
+        min="0"
+        step="any"
+        placeholder="Digite um valor"
+      >
+
+      <div class="currency-row">
+        <div class="currency-field">
+          <label for="fromCurrency">De</label>
+          <select id="fromCurrency">
+            <option value="BRL" selected>🇧🇷 BRL — Real</option>
+            <option value="USD">🇺🇸 USD — Dólar</option>
+            <option value="EUR">🇪🇺 EUR — Euro</option>
+            <option value="GBP">🇬🇧 GBP — Libra</option>
+            <option value="JPY">🇯🇵 JPY — Iene</option>
+            <option value="CAD">🇨🇦 CAD — Dólar canadense</option>
+            <option value="CHF">🇨🇭 CHF — Franco suíço</option>
+          </select>
+        </div>
+
+        <button
+          type="button"
+          id="swapButton"
+          class="swap-button"
+          aria-label="Inverter moedas"
+          title="Inverter moedas"
+        >⇄</button>
+
+        <div class="currency-field">
+          <label for="toCurrency">Para</label>
+          <select id="toCurrency">
+            <option value="BRL">🇧🇷 BRL — Real</option>
+            <option value="USD" selected>🇺🇸 USD — Dólar</option>
+            <option value="EUR">🇪🇺 EUR — Euro</option>
+            <option value="GBP">🇬🇧 GBP — Libra</option>
+            <option value="JPY">🇯🇵 JPY — Iene</option>
+            <option value="CAD">🇨🇦 CAD — Dólar canadense</option>
+            <option value="CHF">🇨🇭 CHF — Franco suíço</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="button" id="convertButton" class="convert-button">
+        Converter moedas
+      </button>
+
+      <p id="status" class="status" role="status" aria-live="polite">
+        Pronto para converter.
+      </p>
+
+      <div class="result">
+        <span id="resultLabel">Resultado da conversão</span>
+        <output id="resultValue">US$ 0,00</output>
+        <p id="exchangeRate">Aguardando cotação...</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>As cotações variam conforme o mercado.</p>
+      <p>Projeto educacional CurrencyFlow.</p>
+    </footer>
+  </main>
+</body>
+</html>

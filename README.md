@@ -26,7 +26,7 @@ Tabela de conteúdos
 
 ## Sobre
 
-Conversor de moeda feito com Flutter para android e IOS 
+Conversor de moeda feito com Flutter para android, web e IOS 
 
 ## Tabela de conteudo
 
